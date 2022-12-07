@@ -1,0 +1,11 @@
+<div class="timeline">
+    <div *ngFor='let entry of timeLine;let i = index'>
+      <div class="container" [ngClass]="{ left: i%2!==0, right:i%2==0}">
+        <div class="content">
+          <h2>{{entry.year}}</h2>
+          <h5 style="color:darkgray">{{entry.job}}</h5>
+          <p>{{entry.detail}}</p>
+        </div>
+      </div>
+    </div>
+  </div>

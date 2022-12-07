@@ -1,54 +1,63 @@
-<nav class="navbar navbar-light  ">
+<nav id="navDiv" class="navbar navbar-light ">
 
   <div class="collapse navbar-collapse text-center" id="navbarSupportedContent"
     style="text-align:center;display:block;">
     <div class="row col-md-12 text-center" style="margin-top:1em;">
       <div class="col-md-4"></div>
       <div class="col-md-1">
-        <a class="nav-link" href="#">About</a>
+        <button class="buttonStyle" (click)="moveWindow('aboutDiv')">About</button>
       </div>
       <div class="col-md-1">
-        <a class="nav-link" href="#">Skills</a>
+        <button class="buttonStyle" (click)="moveWindow('skillsDiv')">Skills</button>
+      </div>
+      <div class="col-md-1" style="padding-left:0;">
+        <button class="buttonStyle" (click)="moveWindow('experienceDiv')">Experience</button>
       </div>
 
       <div class="col-md-1">
-        <a class="nav-link" href="#">Experience</a>
-      </div>
-      <div class="col-md-1">
-        <a class="nav-link" href="#">Contact</a>
+        <button class="buttonStyle" (click)="moveWindow('contactDiv')">Contact</button>
       </div>
       <div class="col-md-4"></div>
+      
 
     </div>
 
   </div>
 </nav>
-
+<div style="text-align: end; margin-right: 100px;">
+<button (click)="moveWindow('navDiv');"  class="buttonHome" style="position:fixed;"><i class="fa fa-home" style="font-size:30px;"></i></button>
+</div>
 <div class="container">
-  <div class="row col-md-12 " style="margin-top:50px">
+  <div class="row col-md-12 " style="margin-top:20px">
     <div class="col-md-6" style="margin-top:auto;margin-bottom:auto;">
       <div class="row col-md-12">
         <div class="col-md-12">
           <h5 style="color:brown">Hi!</h5>
         </div>
         <div class="col-md-12">
-          <h1>I'm Diego Torres</h1>
+          <h1 style="font-weight:800;">I'm Diego Torres</h1>
+          <h5 style="color:cadetblue">Fullstack Software Developer</h5>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12" style=" margin-bottom:60px;">
           <p style="text-justify: auto;">On this website I will talk about my skills, studies, experience, hobbies and
             something else :)</p>
+            
         </div>
       </div>
     </div>
 
     <div class="col-md-6">
-      <img src="http://www.fillster.com/images/pictures/8i.jpg" alt="">
+      <img src="../assets/img/foto.png" alt="" style=" margin-bottom:60px;">
+    </div>
+    <div class="col-md-12" style="display:flex;">
+      
+      <button (click)="changeView();" style="margin-left:auto;margin-right:auto;border:none;background-color:transparent;"><div id="dialog1" class="triangle_down" ></div></button>
     </div>
 
   </div>
 </div>
 
-<div class="col-md-12" style="margin-top:50px;background-color: #fdf9c4;">
+<div id="aboutDiv" class="col-md-12" style="margin-top:50px;background-color: #bad5f0;">
   <div class="container">
     <div class="row">
       <div class="col-md-12" style="margin-top:2em;">
@@ -66,46 +75,76 @@
 
   </div>
 
-  <div class="col-md-12" style="margin-top:50px;background-color: blueviolet;">
+  <div id="skillsDiv" class="col-md-12" style="margin-top:50px;background-color: aliceblue;">
     <div class="container">
       <div class="row">
         <div class="col-md-12" style="margin-top:2em;">
           <h1>Skills</h1>
         </div>
         <div class="col-md-12" style="margin-top:2em;">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia architecto labore atque magni quia
-            voluptatibus ipsum voluptatum nemo soluta. Iure quos earum aliquid, quas ab officiis totam esse nam nulla.
-          </p>
+          <div class="row container text-center">
+            <div class="col-md-3" style="margin-top:auto;margin-bottom:auto;">
+              <img src="../assets/img/java.png" alt="" style="width:150px; ">
+            </div>
+            <div class="col-md-3" style="margin-top:auto;margin-bottom:auto;">
+              <img src="../assets/img/spring-boot.png" style="width:150px; " alt="">
+            </div>
+            <div class="col-md-3" style="margin-top:auto;margin-bottom:auto;">
+              <img src="../assets/img/angular.png" style="width:150px; margin-top:auto;margin-bottom:auto;" alt="">
+            </div>
+            <div class="col-md-3" style="margin-top:auto;margin-bottom:auto;">
+              <img src="../assets/img/mysql.png" style="width:200px; margin-top:auto;margin-bottom:auto;" alt="">
+            </div>
+            <div class="col-md-12" style="margin-top:2em;">
+              <p>
+                I have skills and experience in java and spring boot as well as angular, typescript, Rest, Soap, microservices, SQL and NoSQL Databases and Aws.</p></div>
+          </div>
         </div>
       </div>
 
     </div>
 
-    <div class="col-md-12" style="margin-top:50px;background-color: coral;">
+    <div id="experienceDiv" class="col-md-12" style="margin-top:50px;background-color: #474e5d;">
       <div class="container">
         <div class="row">
           <div class="col-md-12" style="margin-top:2em;">
-            <h1>Experience</h1>
+            <h1 style="color:white;">Experience</h1>
           </div>
           <div class="col-md-12" style="margin-top:2em;">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia architecto labore atque magni quia
-              voluptatibus ipsum voluptatum nemo soluta. Iure quos earum aliquid, quas ab officiis totam esse nam nulla.
-            </p>
+            <my-timeline class="container"></my-timeline>
           </div>
         </div>
 
       </div>
 
-      <div class="col-md-12" style="margin-top:50px;background-color: bisque;">
+      <div id="contactDiv" class="col-md-12" style="margin-top:50px;background-color: cornsilk;">
         <div class="container">
           <div class="row">
             <div class="col-md-12" style="margin-top:2em;">
               <h1>Contact</h1>
             </div>
-            <div class="col-md-12" style="margin-top:2em;">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia architecto labore atque magni quia
-                voluptatibus ipsum voluptatum nemo soluta. Iure quos earum aliquid, quas ab officiis totam esse nam
-                nulla.</p>
+            <div class="col-md-12" style="margin-top:2em;margin-bottom:20px;">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <div class="col-form-label">Name</div>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="form-group col-md-6">
+                  <div class="col-form-label">E-mail</div>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="form-group col-md-12">
+                  <div class="col-form-label">Subject</div>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="form-group col-md-12">
+                  <div class="col-form-label">Message</div>
+                  <textarea class="form-control"></textarea>
+                </div>
+              </div>
+              <div class="col-md-12 text-center" style="margin-top:20px;margin-bottom:20px;">
+                <button class="btn btn-success">Submit</button>
+              </div>
             </div>
           </div>
 

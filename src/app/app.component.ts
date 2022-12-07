@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pruebaapp';
+
+  public moveWindow(option:string){
+    if(option != null){
+      const d = document.getElementById(option);
+      d!.scrollIntoView();
+    }
+  }
+
+  changeView(){
+        document.getElementById("aboutDiv")?.scrollIntoView();
+    }
+
+
 }

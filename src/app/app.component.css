@@ -1,0 +1,39 @@
+.buttonStyle{
+  border:none;
+  color:black;
+  font-weight: 700;
+  background-color: transparent;
+}
+
+.buttonStyle:hover{
+  background-color: #bad5f0;
+  transition: background-color 0.2s ease-in-out;
+  border-radius: 5px;
+  color:darkslategray;
+}
+
+
+.triangle_down {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid #2f2f2f;
+  font-size: 0;
+  line-height: 0;
+  float: left;
+}
+
+.triangle_down:hover{
+  border-top: 25px solid cadetblue;
+  transition: border-top 0.2s ease-in-out;
+}
+
+.buttonHome{
+  border:none;
+  background-color:transparent;
+}
+
+.fa-home:hover{
+  color: darkslategray;
+}
